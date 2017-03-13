@@ -28,6 +28,7 @@ var articleOne={
             </p>
             <p>
                 This is Article one.This is Article one.This is Article one.This is Article one.This is Article one.This is Article one.This is Article one.This is Article one.
+            </p>
             <p>
                     This is Article one.This is Article one.This is Article one.This is Article one.This is Article one.
             </p>`,
