@@ -64,7 +64,7 @@ function createTemp(data){
 } 
 
 app.get('/article-one', function (req, res) {
-  res.send(createTemp(article-one));
+  res.send(createTemp(articleOne));
 });
 
 app.get('/ui/style.css', function (req, res) {
