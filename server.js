@@ -9,30 +9,34 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-var articleOne={
-    title:'Article One',
-    heading:'Article One',
-    date:' Mar 13,2017',
-    content:`<p>
-                This is Article one.This is Article one.This is Article one.This is Article one.This is Article one.This is Article one.This is Article one.This is Article one.This is Article one.This is Article one.This is Article one.This is Article one.This is Article one.This is Article one.
-            </p>
-            <p>
-                This is Article one.This is Article one.This is Article one.This is Article one.This is Article one.This is Article one.This is Article one.This is Article one.
-            </p>
-            <p>
-                    This is Article one.This is Article one.This is Article one.This is Article one.This is Article one.
-            </p>
-            
-            <p>
-                This is Article one.This is Article one.This is Article one.This is Article one.This is Article one.This is Article one.This is Article one.This is Article one.This is Article one.This is Article one.This is Article one.This is Article one.This is Article one.This is Article one.
-            </p>
-            <p>
-                This is Article one.This is Article one.This is Article one.This is Article one.This is Article one.This is Article one.This is Article one.This is Article one.
-            </p>
-            <p>
-                    This is Article one.This is Article one.This is Article one.This is Article one.This is Article one.
-            </p>`,
-};
+var articles={
+    'article-one':{  
+                    title:'Article One',
+                    heading:'Article One',
+                    date:' Mar 13,2017',
+                    content:`<p>
+                                This is Article one.This is Article one.This is Article one.This is Article one.This is Article one.This is Article one.This is Article one.This is Article one.This is Article one.This is Article one.This is Article one.This is Article one.This is Article one.This is Article one.
+                            </p>
+                            <p>
+                                This is Article one.This is Article one.This is Article one.This is Article one.This is Article one.This is Article one.This is Article one.This is Article one.
+                            </p>
+                            <p>
+                                    This is Article one.This is Article one.This is Article one.This is Article one.This is Article one.
+                            </p>
+                            
+                            <p>
+                                This is Article one.This is Article one.This is Article one.This is Article one.This is Article one.This is Article one.This is Article one.This is Article one.This is Article one.This is Article one.This is Article one.This is Article one.This is Article one.This is Article one.
+                            </p>
+                            <p>
+                                This is Article one.This is Article one.This is Article one.This is Article one.This is Article one.This is Article one.This is Article one.This is Article one.
+                            </p>
+                            <p>
+                                    This is Article one.This is Article one.This is Article one.This is Article one.This is Article one.
+                            </p>`,
+                }
+        
+             }      
+
 function createTemp(data){
     var title=data.title;
     var heading=data.heading;
@@ -64,8 +68,8 @@ function createTemp(data){
     return htmlTemplate;                    
 } 
 
-app.get('/article-one', function (req, res) {
-  res.send(createTemp(articleOne));
+app.get('/:articleName', function (req, res) {
+  res.send(createTemp(articles[articleName]));
 });
 
 app.get('/ui/style.css', function (req, res) {
