@@ -63,11 +63,6 @@ function createTemp(data){
     return htmlTemplate;                    
 } 
 
-app.get('/article-one', function (req, res) {
-  res.send(createTemp(articleOne));
-});
-
-
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
