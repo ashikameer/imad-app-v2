@@ -16,69 +16,6 @@ app.get('/counter', function (req, res) {
   res.send(counter.toString());
 });
 
-var articles={
-    'article-one':{  
-                    title:'Article One',
-                    heading:'Article One',
-                    date:' Mar 13,2017',
-                    content:`<p>
-                                This is Article one.This is Article one.This is Article one.This is Article one.This is Article one.This is Article one.This is Article one.This is Article one.This is Article one.This is Article one.This is Article one.This is Article one.This is Article one.This is Article one.
-                            </p>
-                            <p>
-                                This is Article one.This is Article one.This is Article one.This is Article one.This is Article one.This is Article one.This is Article one.This is Article one.
-                            </p>
-                            <p>
-                                    This is Article one.This is Article one.This is Article one.This is Article one.This is Article one.
-                            </p>
-                            
-                            <p>
-                                This is Article one.This is Article one.This is Article one.This is Article one.This is Article one.This is Article one.This is Article one.This is Article one.This is Article one.This is Article one.This is Article one.This is Article one.This is Article one.This is Article one.
-                            </p>
-                            <p>
-                                This is Article one.This is Article one.This is Article one.This is Article one.This is Article one.This is Article one.This is Article one.This is Article one.
-                            </p>
-                            <p>
-                                    This is Article one.This is Article one.This is Article one.This is Article one.This is Article one.
-                            </p>`,
-                }
-        
-             }      
-
-function createTemp(data){
-    var title=data.title;
-    var heading=data.heading;
-    var date=data.date;
-    var content=data.content;
-    var htmlTemplate=`<html>
-                            <head>
-                                <title>
-                                   ${title}
-                                </title>
-                                <link href="/ui/style.css" rel="stylesheet"/>
-                            </head>
-                            <body>
-                                <div>
-                                    <a href="/">Home</a>
-                                </div>
-                                <hr/>
-                                <h3>
-                                    ${heading}
-                                </h3>
-                                <div>
-                                    ${date}   
-                                </div>
-                                <div class="container">
-                                    ${content}
-                                </div>
-                            </body>
-                        </html>`
-    return htmlTemplate;                    
-} 
-
-app.get('/:articleName', function (req, res) {
-  res.send(createTemp(articles[articleName]));
-});
-
 app.get('/ui/main.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'main.js'));
 });
