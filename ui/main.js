@@ -8,8 +8,8 @@ function moveRight () {
 img.onclick = function () {
     var interval =setInterval(moveRight,100);
 };
-var button=document.getElementById("button");
-var span=document.getElementById("span");
+var button=document.getElementById("butto");
+var span=document.getElementById("spa");
 
 button.onclick = function(){
     var request = new XMLHttpRequest() ;
