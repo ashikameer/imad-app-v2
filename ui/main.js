@@ -22,5 +22,4 @@ button.onclick = function(){
         }
 };
 request.open('GET','http://ashikameer.imad.hasura-app.io/counter',true);
-request.send(null);
 };
