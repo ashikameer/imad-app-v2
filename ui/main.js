@@ -1,7 +1,7 @@
 var button=document.getElementById('butto');
 var span=document.getElementById('spa');
 
-button.onclick = function(){
+button.onClick = function(){
     var request = new XMLHttpRequest() ;
     request.onreadystatechange = function(){
         if (request.readystate===XMLHttpRequest.DONE){
