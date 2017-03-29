@@ -20,6 +20,6 @@ button.onclick = function(){
                 span.innerHTML = counter.toString();
             }
         }
-};
-request.open('GET','http://ashikameer.imad.hasura-app.io/counter',true);
+    request.open('GET','http://ashikameer.imad.hasura-app.io/counter',true);
+    };
 };
