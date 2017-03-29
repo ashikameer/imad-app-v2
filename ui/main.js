@@ -1,8 +1,3 @@
- 
-
-img.onclick = function () {
-    var interval =setInterval(moveRight,100);
-};
 var button=document.getElementById('butto');
 var span=document.getElementById('spa');
 
