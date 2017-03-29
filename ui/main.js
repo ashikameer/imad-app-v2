@@ -1,5 +1,5 @@
-var button=document.getElementById('butto');
-var span=document.getElementById('spa');
+var button = document.getElementById('butto');
+var span = document.getElementById('spa');
 
 button.onclick = function(){
     var request = new XMLHttpRequest() ;
