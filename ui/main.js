@@ -1,4 +1,4 @@
-var img = document.getElementById("madi") ;
+var img = document.getElementById('madi') ;
 var lft=0 ;
 function moveRight () {
     lft=lft+10;
