@@ -1,5 +1,4 @@
 var button = document.getElementById('butto');
-var span = document.getElementById('spa');
 
 button.onclick = function(){
     var request = new XMLHttpRequest() ;
@@ -7,6 +6,7 @@ button.onclick = function(){
         if (request.readystate===XMLHttpRequest.DONE){
             if(request.status===200){
                 var counter = request.responseText;
+                var span = document.getElementById('spa');
                 span.innerHTML = counter.toString();
             }
         }
