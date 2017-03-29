@@ -1,7 +1,7 @@
 var button=document.getElementById('butto');
 var span=document.getElementById('spa');
 
-button.onClick = function(){
+button.onclick = function(){
     var request = new XMLHttpRequest() ;
     request.onreadystatechange = function(){
         if (request.readystate===XMLHttpRequest.DONE){
@@ -10,6 +10,7 @@ button.onClick = function(){
                 span.innerHTML = counter.toString();
             }
         }
-    request.open('GET','http://ashikameer.imad.hasura-app.io/counter',true);
     };
+    request.open('GET','http://ashikameer.imad.hasura-app.io/counter',true);
+    request.send(null);
 };
