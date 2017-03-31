@@ -1,3 +1,4 @@
+
 var butto=document.getElementById('counter');
 var counter = 0 ;
 butto.onclick===function(){
