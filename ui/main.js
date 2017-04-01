@@ -26,8 +26,9 @@ submit.onclick=function(){
         if(request.readyState===XMLHttpRequest.DONE){
             if(request.status===200){
                 var names = request.responseText;
+                names=JSON.parse(names);
                 for(var i=0;i<names.length;i++){
-                    list=list + "<li>"+names[i]+"</li>";
+                    list='<li>'+names+'</li>';
                 }
                 var upd = document.getElementById("lis");
                 upd.innerHTML = list;
