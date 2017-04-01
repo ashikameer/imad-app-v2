@@ -34,7 +34,7 @@ submit.onclick=function(){
             }
         }
     };
-    request.open('GET','http://ashikameer.imad.hasura-app.io/submit-name:'+name,true);
+    request.open('GET','http://ashikameer.imad.hasura-app.io/submit-name'+name,true);
     request.send(null);
     
 };
