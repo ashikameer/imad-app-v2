@@ -27,7 +27,7 @@ submit.onclick=function(){
             if(request.status===200){
                 var names = request.responseText;
                 for(var i=0;i<names.length;i++){
-                    list="<li>"+names[i]+"</li>";
+                    list=list + "<li>"+names[i]+"</li>";
                 }
                 var upd = document.getElementById("lis");
                 upd.innerHTML = list;
