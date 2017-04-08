@@ -19,7 +19,7 @@ var config = {
 var pool = new Pool()
 
 app.get('/test-db', function (req, res) {
-  pool.query('SELECT ', function(err, result){  
+  pool.query('SELECT* FROM article', function(err, result){  
     if(err){
       res.status(500).send(err.toString());
     } else {
