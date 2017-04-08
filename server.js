@@ -5,7 +5,28 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
+var Pool = require('pg').Pool 
+
 var counter = 0;
+
+var config = {
+  user : 'ashikameer',
+  database : 'ashikameer',
+  host : 'db.imad.hasua-app.io',
+  post : '5432',
+  password : process.env.DB_PASSWORD
+};
+var pool = new Pool()
+
+app.get('/test-db', function (req, res) {
+  pool.query('SELECT ', function(err, result){  
+    if(err){
+      res.status(500).send(err.toString());
+    } else {
+    res.send(JSON.stringify(result));
+    }
+  });
+});
 
 app.get('/ui/main.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'main.js'));
