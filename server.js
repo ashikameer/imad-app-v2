@@ -5,7 +5,7 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var Pool = require('pg').Pool 
+var Pool = require('pg').Pool; 
 
 var counter = 0;
 
@@ -16,7 +16,7 @@ var config = {
   post : '5432',
   password : process.env.DB_PASSWORD
 };
-var pool = new pool()
+var pool = new pool();
 
 app.get('/test-db', function (req, res) {
   pool.query('SELECT* FROM article', function(err, result){  
