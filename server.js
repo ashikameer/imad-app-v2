@@ -13,7 +13,7 @@ var config = {
   user : 'ashikameer',
   database : 'ashikameer',
   host : 'db.imad.hasua-app.io',
-  post : '5432',
+  port : '5432',
   password : process.env.DB_PASSWORD
 };
 var pool = new pool();
