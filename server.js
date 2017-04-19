@@ -16,7 +16,7 @@ var config = {
   port : '5432',
   password : process.env.DB_PASSWORD
 };
-var pool = new pool();
+var pool = new Pool(config);
 
 app.get('/test-db', function (req, res) {
   pool.query('SELECT* FROM Article', function(err, result){  
