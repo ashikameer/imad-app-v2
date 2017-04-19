@@ -12,7 +12,7 @@ var counter = 0;
 var config = {
   user : 'ashikameer',
   database : 'ashikameer',
-  host : 'db.imad.hasua-app.io',
+  host : 'db.imad.hasura-app.io',
   port : '5432',
   password : process.env.DB_PASSWORD
 };
@@ -21,7 +21,7 @@ var pool = new Pool(config);
 app.get('/test-db', function (req, res) {
   pool.query('SELECT * FROM "Article"', function(err, result){  
     if(err){
-      res.status(404).send(err.toString());
+      res.status(500).send(err.toString());
     } else {
     res.send(JSON.stringify(result));
     }
